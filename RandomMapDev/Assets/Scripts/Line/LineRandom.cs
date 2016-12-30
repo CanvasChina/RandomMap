@@ -34,7 +34,7 @@ public class LineRandom : MonoBehaviour {
 
 		trailRender = this.GetComponent<TrailRenderer>();
 
-		trailRender.time = Random.Range(5, 30);
+		trailRender.time = Random.Range(17, 30);
 
 	}
 	
@@ -60,13 +60,15 @@ public class LineRandom : MonoBehaviour {
 		
 			changeTime = Random.Range(3.0f, 10.0f);
 
-			trailRender.time = Random.Range(5, 30);
+			//trailRender.time = Random.Range(5, 30);
 
 			if(isRandomAngle) {
 
 				angleSpeed = Random.Range(1, 30);
 
-				ResourcesHelper.Create("darkhole", tran.position);
+				GameObject obj = ResourcesHelper.Create("darkhole", tran.position);
+
+				obj.GetComponent<Darkhole>().Init(trailRender.time);
 			
 			}
 		
