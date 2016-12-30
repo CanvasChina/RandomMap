@@ -22,7 +22,6 @@ public class MapCreator : MonoBehaviour {
 	void Start () {
 
 		Init();
-
 		CreateMap();
 	
 	}
